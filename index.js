@@ -2,7 +2,7 @@ const fileBtn = document.getElementById('file')
 const userName = document.getElementById('userName')
 fileBtn.addEventListener('change', () => {
   const fd = new FormData()
-  fd.append('file', file.files[0])
+  fd.append('file', fileBtn.files[0])
   fd.append('userName', userName.value)
   fd.append('age','18')
   fetch('http://localhost:3036/upload', {
